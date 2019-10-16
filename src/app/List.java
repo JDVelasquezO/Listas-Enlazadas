@@ -5,10 +5,12 @@ package app;
  */
 public class List {
 
-    private Node start; // Punteros
+    private Node start; // Puntero
+    private int length; // Guardará el tamaño de la lista
 
     public List() {
         start = null;
+        length = 0;
     }
 
     // Metodos de incersión:
@@ -16,6 +18,7 @@ public class List {
         Node node = new Node(value);
         node.next = start;
         start = node;
+        length++;
     }
 
     public void addFinish (Object value) {
@@ -30,6 +33,7 @@ public class List {
 
             pointer.next = node;
         }
+        length++;
     }
 
     // Método de obtención:
@@ -51,4 +55,12 @@ public class List {
             }
         }
     }
+
+    // Obtener la longitud de la lista
+    public int getLength () {
+        return length;
+    }
+
+    // Metodos de eliminación:
+    
 }
