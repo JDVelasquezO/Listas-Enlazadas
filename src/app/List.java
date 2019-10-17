@@ -120,4 +120,25 @@ public class List {
             length--;
         }
     }
+
+    // Modificar un nodo en concreto:
+    public void modifyNode (int n, Object newValue) {
+        if (isEmpty()) {
+            System.out.println("No hay nada");
+        } else {
+            Node pointer = start;
+            int counter = 0;
+            
+            while (counter < n && pointer.next != null) {
+                pointer = pointer.next;
+                counter++;
+            }
+            
+            if (counter != n) {
+                System.out.println("No hay nada");
+            } else {
+                pointer.value = newValue;
+            }
+        }
+    }
 }
