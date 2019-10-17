@@ -7,23 +7,24 @@ public class App {
         User user2 = new User("Danel", 1234);
         
         l.addStart("Java");
-        l.addFinish(user.getName());
+        l.addFinish(user);
         l.addFinish("Python");
         l.addFinish(user2);
         
         // l.deleteFinish();
         // l.deleteStart();
         // l.deleteForCounter(0);
-        int length = l.getLength();
+        // int length = l.getLength();
 
-        
+        l.modifyNode(0, "Javascript");
+        Object object = l.getValue(0);
+        System.out.println(object);
         
         // for (int i = 0; i < length; i++) {
         //     Object object = l.getValue(i);
         //     if (object.equals("JD")) {
         //         System.out.println("Hola");
         //     }
-        //     // System.out.println(object);
         // }
 
     }
